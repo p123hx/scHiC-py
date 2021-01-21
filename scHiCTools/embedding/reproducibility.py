@@ -211,10 +211,13 @@ def pairwise_distances(all_strata, similarity_method,
     else:
         raise ValueError(
             'Method {0} not supported. Only "inner_product", "HiCRep", "old_hicrep" and "Selfish".'.format(method))
-    print('Time 1:', (t3 - t0)*1000000)
-    print('Time 3:',(t1-t3)*1000000)
-    print('Time 4:', (t4 - t1)*1000000)
-    print('Time 5:',(t2 - t4)*1000000)
+    print('Time 1:', (t3 - t0))
+    print('Time 3:',(t1-t3))
+    print('Time 4:', (t4 - t1))
+    print('Time 5:',(t2 - t4))
+    print("t1-t0: ",(t1-t0))
+    print("t2-t1: ",t2-t1)
+    print("total: ", t2-t0)
 
     if print_time:
         print('Time 1:', t1 - t0)
