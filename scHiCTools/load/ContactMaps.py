@@ -308,7 +308,14 @@ class scHiCs:
             pair_dis = pairwise_distances(self.strata[chr], 'selfish')
 
     def test_fast(self):
-        pair_dis = pairwise_distances(self.strata['chr8'], 'hicrep')
+        chrs = ["chr1", "chr2", "chrX", "chr3", "chr4", "chr5", "chr6", "chr7",
+                "chr8", "chr9", "chr10", "chr11", "chr12", "chr13", "chr14",
+                "chr15", "chr16", "chr17", "chr18", "chr19", "chrY"]
+        timeS =0.0;
+        for chr in chrs:
+            pair_dis, time = pairwise_distances(self.strata['chr8'], 'hicrep')
+            timeS += time
+        print("all chr total: ", timeS)
 
     def processing(self, operations, **kwargs):
         """

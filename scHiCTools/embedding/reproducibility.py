@@ -224,4 +224,4 @@ def pairwise_distances(all_strata, similarity_method,
         print('Time 2:', t2 - t1)
         return distance_mat, t1 - t0, t2 - t1
     else:
-        return distance_mat
+        return distance_mat, t2-t0
